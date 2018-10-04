@@ -1,0 +1,14 @@
+# You can use this file to create a conda environment for this pipeline:
+#   conda env create -f environment.yml
+name: ao-tool_v1
+channels:
+  - bioconda
+  - r
+  - conda-forge
+  - defaults
+dependencies:
+  - blast=2.7.1
+  - biopython=1.61
+  - r-base=3.5.1
+  - transdecoder=5.2.0
+  - muscle=3.8.31
