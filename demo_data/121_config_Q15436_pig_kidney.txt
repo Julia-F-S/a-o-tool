@@ -1,5 +1,5 @@
 {
-"assembly": "./demo_data/BinPacker_assembly_pig_kidney.fa",
+"assembly": "./demo_data/BinPacker_assembly_pig_kidney.fa.gz",
 "left_fastq": "",
 "right_fastq": "",
 "refined_species": "pig",
