@@ -1,0 +1,13 @@
+{
+"assembly": "./demo_data/BinPacker_assembly_pig_kidney.fa",
+"left_fastq": "",
+"right_fastq": "",
+"refined_species": "pig",
+"ortholog_species": "human",
+"human_swissprot": "./demo_data/human_swissprot.fasta",
+"prot_sequences": "./demo_data/Q15436_orthologs.fa",
+"msa_n_contigs": "5",
+"publishDir": "./Q15436_kidney_pig",
+"blastDB": "blastdb_pig_binpacker_kidney",
+"email": ""
+}
