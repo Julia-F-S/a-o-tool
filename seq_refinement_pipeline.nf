@@ -35,6 +35,7 @@ blastDBname = params.blastDB // name to be used for BLAST database when creating
 pubDir = file("$params.publishDir")
 println "$pubDir"
 email = params.email
+numBlastThreads = params.numBlastThreads
 
 // set default directory to store BLAST databases in
 blastDBdir = file("$baseDir/blastdb/assemblies") 
@@ -178,8 +179,7 @@ process tblastn {
     -outfmt '6 qaccver saccver pident length mismatch gapopen qstart qend sstart send evalue bitscore qframe sframe qlen slen' \
     -evalue 0.0001 \
     -gapopen 11 -gapextend 1 -word_size 3 -matrix BLOSUM62 \
-    -max_target_seqs $msa_n_contigs -num_threads 10 
-
+    -max_target_seqs $msa_n_contigs -num_threads $numBlastThreads
     """
 }
 
@@ -252,7 +252,7 @@ process blastx {
   -outfmt '6 qaccver saccver pident length mismatch gapopen qstart qend sstart send evalue bitscore qframe sframe qlen slen' \
   -evalue 0.0001 \
   -gapopen 11 -gapextend 1 -word_size 3 -matrix BLOSUM62 \
-  -num_alignments 3 -num_threads 10
+  -num_alignments 3 -num_threads $numBlastThreads
 
   """
 }
