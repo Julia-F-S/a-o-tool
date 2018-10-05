@@ -456,7 +456,7 @@ if os.stat("${x}").st_size != 0:
 
   # open file & write header
   f = open("percentIdentityStats_${x}.txt", 'w') 
-  f.write("name1 \\t name2 \\t n_matches \\t query_perc_identity \\t target_perc_identity \\t target_minus_query_perc_identity \\t score \\t length_aa_ortholog \\t length_aa_hs \\n")
+  f.write("name1 \\t name2 \\t n_matches \\t query_perc_identity \\t target_perc_identity \\t target_minus_query_perc_identity \\t length_aa_ortholog \\t length_aa_hs \\n")
 
   # add original values (if original sequence(s) available)
   if len(seqOrig) != 0:
@@ -472,7 +472,7 @@ if os.stat("${x}").st_size != 0:
             pMatchOrig_delta = pMatchOrig_orig - pMatchOrig_hs
             scoreOrig = ((1-(pMatchOrig_hs/100)) * (1-(pMatchOrig_orig/100))) + (abs(pMatchOrig_delta)/100)
 
-            f.write(oIt.name + "\\t" + hsIt.name + "\\t" + str(matches) + "\\t" + str(pMatchOrig_hs) + "\\t" + str(pMatchOrig_orig) + "\\t" + str(pMatchOrig_delta) + "\\t" + str(scoreOrig) + "\\t" + str(len(oIt))  + "\\t" + str(len(hsIt))+ "\\n")
+            f.write(oIt.name + "\\t" + hsIt.name + "\\t" + str(matches) + "\\t" + str(pMatchOrig_hs) + "\\t" + str(pMatchOrig_orig) + "\\t" + str(pMatchOrig_delta) + "\\t" + str(len(oIt))  + "\\t" + str(len(hsIt)) + "\\n")
 
   # iterate over the refined and human sequences to compute pairwise stats for all of them & write them to file
   for refIt in seqRef:
@@ -490,7 +490,7 @@ if os.stat("${x}").st_size != 0:
         pMatchRefined_delta = pMatchRefined_refined - pMatchRefined_hs
         scoreRefined = ((1-(pMatchRefined_hs/100)) * (1-(pMatchRefined_refined/100))) + (abs(pMatchRefined_delta)/100)
 
-        f.write(refIt.name + "\\t" + hsIt.name + "\\t" + str(matches) + "\\t" + str(pMatchRefined_hs) + "\\t" + str(pMatchRefined_refined) + "\\t" + str(pMatchRefined_delta) + "\\t" + str(scoreRefined) + "\\t" + str(len(seqRefined))  + "\\t" + str(len(hsIt))+ "\\n")
+        f.write(refIt.name + "\\t" + hsIt.name + "\\t" + str(matches) + "\\t" + str(pMatchRefined_hs) + "\\t" + str(pMatchRefined_refined) + "\\t" + str(pMatchRefined_delta) + "\\t" + str(len(seqRefined))  + "\\t" + str(len(hsIt))+ "\\n")
 
   f.close()
 else:
