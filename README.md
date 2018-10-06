@@ -13,6 +13,7 @@ A paper describing the details of the pipeline will be submitted soon.
     ```
     nextflow run seq_refinement_pipeline.nf -with-docker jfsoellner/a-o-tool_dependencies --configFile <your config file>
     ```
+  - the Docker image jfsoellner/a-o-tool_dependencies contains all required software and will be pulled automatically
     
 # Input
 The pipeline requires a config file in json format. To start the pipeline use:
