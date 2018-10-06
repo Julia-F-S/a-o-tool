@@ -24,7 +24,8 @@ The fields of the config file:
 - *human_swissprot*: If you use human as the ortholog_species you can provide a path to a fasta containing all human sequences available in UniprotKB/Swiss-Prot. This file will then be used for a reciprocal BLAST approach. If you do not use human or you do not want to perform this step, set to "".
 - *prot_sequences*: Path to the fasta file containing the known orthologous protein sequence as well as optional sequences from related species or, if available, the currently annotated sequence in the species of interest. **The fasta header must be formated as species_xx, e.g. pig_ENSSSCT00000047607.**
 - *msa_n_contigs*: Number of matching contigs from the assembly which should be included in the multiple sequence alignment. If left blank, i.e. "", only the first contig will be shown.
-- *publishDir*: directory where results should be stored.
+- *publishDir*: Directory where results should be stored.
+- *blastDB*: Name for the BLAST database created for the assembled transcriptome.
 - *email*: Upon completion the pipeline will report to the e-mail address provided in the config file. If you do not want to receive an email, set it to "".
 
 In the following example config file we provide the assembly as a fasta file because it has been computed prior to the pipeline run.
