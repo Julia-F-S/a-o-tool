@@ -1,5 +1,5 @@
 # a-o-tool 
-https://zenodo.org/badge/latestdoi/151209856
+[![DOI](https://zenodo.org/badge/151209856.svg)](https://zenodo.org/badge/latestdoi/151209856)
 
 Exploiting orthology and de novo transcriptome assembly to refine target sequence information
 
