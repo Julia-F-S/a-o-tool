@@ -73,5 +73,5 @@ We have included example data in `demo_data` which you can use to familiarise yo
     
  Once the pipeline has finished there will be a directory in your current working directory called "Q15436_kidney_pig" which contains the following output: 
 
-![img/example_out.png](https://github.com/Julia-F-S/a-o-tool.git/img/example_out.png)
+![img/example_out.png](https://github.com/Julia-F-S/a-o-tool/img/example_out.png)
 
