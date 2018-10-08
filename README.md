@@ -1,6 +1,4 @@
 # a-o-tool 
-[![DOI](https://zenodo.org/badge/151209856.svg)](https://zenodo.org/badge/latestdoi/151209856)
-
 Exploiting orthology and de novo transcriptome assembly to refine target sequence information
 
 The a&o-tool is a Nextflow pipeline which uses a transcriptome assembly of a species of interest and a known orthologous protein sequence from a closely related species to determine the best matching assembled contigs in the species of interest. These contigs are then searched for open reading frames and translated into an amino acid sequence. A multiple sequence alignment of the translated sequence, the orthologous protein and optional sequences from other species is calculated to visually assess the quality of the output. Furthermore, some metrics on the results are provided.
