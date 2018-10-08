@@ -19,15 +19,15 @@ A paper describing the details of the pipeline will be submitted soon.
 The pipeline requires a config file in json format. To start the pipeline use:
 
 The fields of the config file:
-- *assembly*: path to the pre-computed de novo transcriptome assembly in fasta format. If the assembly shall be computed, set to "" and provided reads via the next two fields.
-- *left_fastq*: If no assembly is provided, the R1 reads have to be provided in fasta format. They are used as input for the assembler. If an assembly is provided set to "".
-- *right_fastq*: If no assembly is provided, the R2 reads have to be provided in fasta format. They are used as input for the assembler. If an assembly is provided set to "".
+- *assembly*: path to the pre-computed de novo transcriptome assembly in fasta format. If the assembly shall be computed, set to "" and provide paired-end reads via the next two fields.
+- *left_fastq*: If no assembly is provided, the R1 reads have to be provided in fastq format. They are used as input for the assembler. If an assembly is provided set to "".
+- *right_fastq*: If no assembly is provided, the R2 reads have to be provided in fastq format. They are used as input for the assembler. If an assembly is provided set to "".
 - *refined_species*: Name of the species of interest. 
 - *ortholog_species*: Name of the closely related species with known protein sequence.
 - *human_swissprot*: If you use human as the ortholog_species you can provide a path to a fasta containing all human sequences available in UniprotKB/Swiss-Prot. This file will then be used for a reciprocal BLAST approach. If you do not use human or you do not want to perform this step, set to "".
 - *prot_sequences*: Path to the fasta file containing the known orthologous protein sequence as well as optional sequences from related species or, if available, the currently annotated sequence in the species of interest. **The fasta header must be formated as species_xx, e.g. pig_ENSSSCT00000047607.**
 - *msa_n_contigs*: Number of matching contigs from the assembly which should be included in the multiple sequence alignment. If left blank, i.e. "", only the first contig will be shown.
-- *publishDir*: Directory where results should be stored.
+- *publishDir*: Name or path to directory where results should be stored.
 - *blastDB*: Name for the BLAST database created for the assembled transcriptome.
 - *email*: Upon completion the pipeline will report to the e-mail address provided in the config file. If you do not want to receive an email, set it to "".
 
@@ -71,4 +71,7 @@ We have included example data in `demo_data` which you can use to familiarise yo
  nextflow run seq_refinement_pipeline.nf -with-docker jfsoellner/a-o-tool_dependencies --configFile demo_data/121_config_Q15436_pig_kidney.txt
  ```
     
- Once the pipeline has finished there will be a directory in your current working directory called "Q15436_kidney_pig" which contains all the output. 
+ Once the pipeline has finished there will be a directory in your current working directory called "Q15436_kidney_pig" which contains the following output: 
+
+![My image](Julia-F-S.github.com/a-o-tool/img/example_out.png)
+
