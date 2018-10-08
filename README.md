@@ -73,5 +73,6 @@ We have included example data in `demo_data` which you can use to familiarise yo
     
  Once the pipeline has finished there will be a directory in your current working directory called "Q15436_kidney_pig" which contains the following output: 
 
-![img/example_out.png](./img/example_out.png)
+![example_out](https://user-images.githubusercontent.com/12953738/46595273-d2e80300-cad7-11e8-8c9a-2afa38a6f517.png)
+
 
