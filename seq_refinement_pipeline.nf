@@ -76,6 +76,7 @@ if( params.assembly=="" ) {
   println "assembly doesn't exist, starting BinPacker"
   // run BinPacker on the input fastq files
   process binPackerAssembly {
+     container 'ycogne/binpacker'
      publishDir "$pubDir", mode: 'copy'
 
      input:
