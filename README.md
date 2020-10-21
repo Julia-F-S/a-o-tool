@@ -25,7 +25,7 @@ The fields of the config file:
 - *refined_species*: Name of the species of interest. 
 - *ortholog_species*: Name of the closely related species with known protein sequence.
 - *human_swissprot*: If you use human as the ortholog_species you can provide a path to a fasta containing all human sequences available in UniprotKB/Swiss-Prot. This file will then be used for a reciprocal BLAST approach. If you do not use human or you do not want to perform this step, set to "".
-- *prot_sequences*: Path to the fasta file containing the known orthologous protein sequence as well as optional sequences from related species or, if available, the currently annotated sequence in the species of interest. **The fasta header must be formated as species_xx, e.g. pig_ENSSSCT00000047607.**
+- *prot_sequences*: Path to the fasta file containing the known orthologous protein sequence as well as optional sequences from related species or, if available, the currently annotated sequence in the species of interest. **The fasta header must be formated as species_xx, e.g. pig_ENSSSCT00000047607.** In case you want to execute a reciprocal BLAST search the header must contain the UniProt id, i.e., human_UniProtID.
 - *msa_n_contigs*: Number of matching contigs from the assembly which should be included in the multiple sequence alignment. If left blank, i.e. "", only the first contig will be shown.
 - *publishDir*: Name or path to directory where results should be stored.
 - *blastDB*: Name for the BLAST database created for the assembled transcriptome.
